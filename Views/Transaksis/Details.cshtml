@@ -1,0 +1,30 @@
+﻿@model UCP1_PAW_097_C.Models.Transaksi
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Data Transaksi</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tanggal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tanggal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Judul Tanah")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTanahNavigation.JudulTanah)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.IdTransaksi">Edit</a>
+    <a class="btn btn-outline-danger" asp-action="Index">Kembali</a>
+</div>

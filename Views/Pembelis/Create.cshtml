@@ -1,0 +1,48 @@
+﻿@model UCP1_PAW_097_C.Models.Pembeli
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Tambah</h1>
+
+<h4>Data Pembeli</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdPembeli" class="control-label">Id Pembeli</label>
+                <input asp-for="IdPembeli" class="form-control" />
+                <span asp-validation-for="IdPembeli" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NamaPembeli" class="control-label">Nama Pembeli</label>
+                <input asp-for="NamaPembeli" class="form-control" />
+                <span asp-validation-for="NamaPembeli" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoHpPembeli" class="control-label">Nomor Ponsel</label>
+                <input asp-for="NoHpPembeli" class="form-control" />
+                <span asp-validation-for="NoHpPembeli" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdTransaksi" class="control-label">Nomor Transaksi</label>
+                <select asp-for="IdTransaksi" class ="form-control" asp-items="ViewBag.IdTransaksi"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tambah" class="btn btn-primary" />
+                <a class="btn btn-outline-danger" asp-action="Index">Kembali</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

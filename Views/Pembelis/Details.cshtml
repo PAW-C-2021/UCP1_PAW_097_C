@@ -1,0 +1,36 @@
+﻿@model UCP1_PAW_097_C.Models.Pembeli
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Data Pembeli</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Nama Pembeli")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NamaPembeli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Nomor Ponsel")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoHpPembeli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Nomor Transaksi")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTransaksiNavigation.IdTransaksi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.IdPembeli">Edit</a>
+    <a class="btn btn-outline-danger" asp-action="Index">Kembali</a>
+</div>

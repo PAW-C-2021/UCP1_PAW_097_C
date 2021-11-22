@@ -1,0 +1,54 @@
+﻿@model UCP1_PAW_097_C.Models.Penjual
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Data Penjual</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Nama Penjual")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NamaPenjual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Email")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmailPenjual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Alamat")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AlamatPenjual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Nomor Ponsel")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoHpPenjual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.Display("Tentang")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TentangPenjual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Judul Tanah")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTanahNavigation.JudulTanah)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.IdPenjual">Edit</a>
+    <a class="btn btn-outline-danger" asp-action="Index">Kembali</a>
+</div>

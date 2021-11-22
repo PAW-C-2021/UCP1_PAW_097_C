@@ -1,0 +1,40 @@
+﻿@model UCP1_PAW_097_C.Models.Transaksi
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Data Transaksi</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdTransaksi" />
+            <div class="form-group">
+                <label asp-for="IdTanah" class="control-label">Id Tanah</label>
+                <select asp-for="IdTanah" class="form-control" asp-items="ViewBag.IdTanah"></select>
+                <span asp-validation-for="IdTanah" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tanggal" class="control-label"></label>
+                <input asp-for="Tanggal" class="form-control" />
+                <span asp-validation-for="Tanggal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Simpan" class="btn btn-primary" />
+                <a class="btn btn-outline-danger" asp-action="Index">Kembali</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

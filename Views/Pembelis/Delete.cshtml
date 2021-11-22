@@ -1,0 +1,39 @@
+﻿@model UCP1_PAW_097_C.Models.Pembeli
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Hapus Data</h1>
+
+<h3>Apakah anda yakin ingin menghapus data ini?</h3>
+<div>
+    <h4>Data Pembeli</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Nama Pembeli")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NamaPembeli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Nomor Ponsel")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoHpPembeli)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Nomor Transaksi")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTransaksiNavigation.IdTransaksi)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdPembeli" />
+        <input type="submit" value="Hapus" class="btn btn-danger" />
+        <a class="btn btn-outline-success" asp-action="Index">Kembali</a>
+    </form>
+</div>

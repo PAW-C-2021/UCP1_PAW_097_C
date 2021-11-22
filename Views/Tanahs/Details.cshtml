@@ -1,0 +1,54 @@
+﻿@model UCP1_PAW_097_C.Models.Tanah
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Data Tanah</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Judul Tanah")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JudulTanah)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Alamat")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AlamatTanah)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Status")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Harga")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Harga)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Luas (Ha)")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Luas)
+        </dd>
+@*        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Foto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Foto)
+        </dd>*@
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.IdTanah">Edit</a>
+    <a class="btn btn-outline-danger" asp-action="Index">Kembali</a>
+</div>
